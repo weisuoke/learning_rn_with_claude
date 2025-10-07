@@ -1,25 +1,30 @@
 根据 @prompt/prompt.md 和 @prompt/template_minimal.md 生成内容 
 
-需要参考 @Week05/README.md 中每一天的上下文 和 Learning Path.md
+需要参考 @Week06/README.md 中每一天的上下文 和 Learning Path.md
 
-来生成 Day 4的内容
+来生成 Day 3的内容
 
-本次会超出output token maximum，拆分成两个markdown文档输出
+本次会超出output token maximum，拆分成3个markdown文档输出
 
-# Week 05: Advanced Navigation Patterns & State Management
+# Week 06: Building a Multi-Screen Static Application (News Reader Project)
 
 ## Overview
 
-This week, we will explore advanced navigation patterns that are essential for production mobile apps: authentication flows, modal screens, and preventing back navigation. You'll also learn how to integrate navigation with global state management and handle the navigation state lifecycle. This builds on your existing React knowledge and is a crucial step towards our main goal of **becoming a job-ready React Native developer**.
+This week is a consolidation week where you'll apply everything you've learned in Weeks 1-5 to build a complete, polished news reader application. This project will integrate real API calls, complex navigation, responsive layouts, and production-quality UI. You'll spend the entire week on this single project, treating it like a real client deliverable. This builds on your existing React knowledge and is a crucial step towards our main goal of **becoming a job-ready React Native developer**.
 
 ## Daily Plan
 
-### Day 4: Deep Linking & Universal Links
-*   **Theory:** Read comprehensive guide on [Deep Linking](https://reactnavigation.org/docs/deep-linking) and [Configuring Links](https://reactnavigation.org/docs/configuring-links).
-*   **Practice:**
-    - Configure deep linking in `NavigationContainer` with a `linking` config
-    - Define URL paths for your screens (e.g., `/article/:id` → ArticleDetail screen)
-    - Test deep links in development using `npx uri-scheme open` command
-    - Handle initial URL when app is opened from a deep link
-    - Parse URL parameters and pass them to the correct screen
-    - **Note:** Full implementation with iOS Universal Links and Android App Links requires native configuration (covered later)
+### Day 3: Building the Article List & Detail Screens
+*   **Task:**
+    - Create an `ArticleCard` component with:
+      - Article image (with fallback if no image)
+      - Title, description, source, and publish date
+      - Pressable to navigate to detail screen
+    - Build the `ArticleDetailScreen` with:
+      - Full article image
+      - Article content
+      - Custom header with "Share" and "Bookmark" buttons
+      - "Read Full Article" button that opens external URL (use `Linking.openURL()`)
+    - Pass article data as navigation params from list to detail screen
+    - Implement proper loading states for images
+    - Style with cards, shadows, and proper typography hierarchy
